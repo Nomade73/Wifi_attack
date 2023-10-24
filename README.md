@@ -35,7 +35,6 @@ Then, start airodump-ng to look out for networks:
 
 if airodump-ng could connect to the WLAN device, you'll see a screen like this:
 
-https://www.aircrack-ng.org/lib/exe/fetch.php?tok=1b417c&media=https%3A%2F%2Fwww.aircrack-ng.org%2Fimg%2Fnewbie_airodump.png
 
 ![fetch-1](https://github.com/Nomade73/Wifi_attack/assets/23107011/def894f1-c1b6-477e-8df0-d6fd6e6e6a9d)
 
